@@ -93,11 +93,11 @@ export default function Home() {
     console.log(dataURL)
     function saveFrontPage(e) {
         e.preventDefault()
-        // if (e.target[0].files[0]) {
-        //     uploadIMG(`/Cliente/${query}`, '/', query, dataURL.file, { data, tarjetas: data2 })
-        // } else {
-        //     writeUserData(`/Cliente/${query}`, { data, tarjetas: data2 })
-        // }
+        if (e.target[0].files[0]) {
+            uploadIMG(`/Cliente/${query}`, '/', query, dataURL.file, { data, tarjetas: data2 })
+        } else {
+            writeUserData(`/Cliente/${query}`, { data, tarjetas: data2 })
+        }
 
         // e.target[1].files[0] && uploadIMG('frontPage', 'frontIMG', 'frontIMG', e.target[1].files[0], obj, setUserData, setUserSuccess, 'urlIMG')
         // e.target[0].files[0] === undefined && e.target[1].files[0] === undefined && writeUserData('frontPage', obj, setUserData, setUserSuccess)
@@ -190,15 +190,16 @@ export default function Home() {
         // setData(userDB)
 
 
-        // if (cliente && cliente[query] && cliente[query] && cliente[query].content) {
-        //     setTextEditor(cliente[query].content)
-        // } else {
-        // }
-        setQuery(window.location.href.split('=')[1])
+        if (cliente && cliente[query] && cliente[query] && cliente[query].content) {
+            setTextEditor(cliente[query].content)
+        } else {
+        }
+
+        if (typeof window !== "undefined") {
+            setQuery(window.location.href.split('=')[1])
+        }
 
 
-        // item && userDB && userDB.services && userDB.services[item]['servicio remoto'] && setCheck(userDB.services[item]['servicio remoto'])
-        item === undefined && setCheck(false)
     }, [cliente])
 
     console.log(check)
