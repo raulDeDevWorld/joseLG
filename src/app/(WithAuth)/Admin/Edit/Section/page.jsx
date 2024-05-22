@@ -154,7 +154,7 @@ export default function Home() {
     function addContact(e) {
         e.preventDefault()
 
-        const filename = generateUUID()
+        // const filename = generateUUID()
         const obj = {
             [e.target[0].name]: e.target[0].value,
             [e.target[1].name]: e.target[1].value,
@@ -167,7 +167,7 @@ export default function Home() {
             [e.target[8].name]: e.target[8].value,
             [e.target[9].name]: e.target[9].value,
         }
-        writeUserData(`contactos/`, obj, setUserData, setUserSuccess)
+        writeUserData(`Cliente/contactos/`, obj)
     }
 
     function close(e) {

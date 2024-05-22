@@ -200,6 +200,8 @@ export default function Home() {
         <Button url='maritimo'> Transporte Maritimo  </Button>
         <Button url='aereo'> Transporte Aereo  </Button>
         <Button url='proyecto'> Carga Proyecto  </Button>
+        <Button url='contactos'> Contactos  </Button>
+
 
 
       </div>

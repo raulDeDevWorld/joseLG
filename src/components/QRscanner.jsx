@@ -1,6 +1,6 @@
 'use client'
 
-import { QrScanner } from '@yudiel/react-qr-scanner';
+import { Scanner } from '@yudiel/react-qr-scanner';
 import { useUser } from '@/context/Context.js'
 // import { getSpecificData } from '@/firebase/database'
 
@@ -16,7 +16,7 @@ const Component = () => {
   }
 
   return (
-    <QrScanner
+    <Scanner
       constraints={{
         facingMode: {exact: 'environment'} 
       }}
