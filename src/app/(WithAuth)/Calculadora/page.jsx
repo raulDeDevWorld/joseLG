@@ -45,16 +45,14 @@ export default function Home() {
                 backgroundSize: 'cover'
             }}>
 
-            <div className=' w-screen h-screen bg-gradient-to-t from-[#00061860] to-[#000618d1] flex flex-col justify-center items-center  z-[50]'>
+            <div className=' w-screen pt-[50px] min-h-screen bg-gradient-to-t from-[#00061860] to-[#000618d1] flex flex-col justify-center items-center  z-[50]'>
 
                 {/* <video  className='absolute top-0  w-full min-h-[100vh] object-cover z-10' autoPlay loop muted>
       <source src='underwater.mp4' type="video/mp4" />
     </video>  */}
-    <div className='h-[100px]'>
-
-    </div>
-                <img src="/truck.png" className='fixed  w-screen h-screen bg-[#01A7EB] object-cover lg:hidden' alt="" />
-                <img src="/airplane-bg.jpg" className='absolute  w-screen h-screen bg-[#01A7EB] object-cover hidden md:block' alt="" />
+  
+                <img src="/truck.png" className='fixed top-0 w-screen h-screen bg-[#01A7EB] object-cover lg:hidden' alt="" />
+                <img src="/airplane-bg.jpg" className='fixed top-0  w-screen h-screen bg-[#01A7EB] object-cover hidden md:block' alt="" />
                 <div className='w-full text-center flex justify-center'>
                     <img src="/logo.svg" className='w-[300px] z-[50]' alt="User" />
                 </div>
