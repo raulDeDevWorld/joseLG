@@ -268,9 +268,12 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
+
                         <div className='flex justify-center p-5'>
+                        <Suspense >
 
                             <video src={dataURL && dataURL.frontPage && dataURL.frontPage ? dataURL.frontPage : (cliente && cliente[query] && cliente[query].url)} className='h-[300px]' autoPlay loop muted ></video>
+                            </Suspense >
 
                         </div>
                     </div>
@@ -282,6 +285,7 @@ export default function Home() {
                         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8">
                             <div className="sm:col-span-3">
                                 <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Contenido de texto</label>
+                                
                                 <TextEditor value={textEditor ? textEditor : 'nada'} setValue={setTextEditor} edit={true} ></TextEditor>
                             </div>
                         </div>
