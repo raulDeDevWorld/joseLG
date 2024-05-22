@@ -60,20 +60,30 @@ export default function Home() {
           <br />
           <div  className='space-y-4 bg-[#00061860] p-5  rounded-[10px] lg:space-y-3'>
 
-            <h5  className="text-[22px] text-center font-bold text-white z-[50]">Iniciar Sesión</h5>
+            <h5  className="text-[22px] text-center font-bold text-white z-[50]">CALCULO POR PESO VOLUMETRICO POR DIMENSIONES</h5>
       
             <div>
-              <label htmlFor="email"  className="block mb-2 text-[16px] text-left font-medium text-[#F1BA06]">Email</label>
-              <Input type="email" name="email" id="email"  className="bg-gray-50 border border-gray-300 text-gray-900 text-[16px] rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required />
+              <label htmlFor="email"  className="block mb-2 text-[16px] text-left font-medium text-[#F1BA06]">LARGO CM</label>
+              <Input type="text" name="largo" id="email"  className="bg-gray-50 border border-gray-300 text-gray-900 text-[16px] rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="" required />
             </div>
             <div>
-              <label htmlFor="password"  className="block mb-2 text-[16px] text-left  font-medium text-[#F1BA06]">Contraseña</label>
-              <Input type="password" name="password" id="password" placeholder="••••••••"  className="bg-gray-50 border border-gray-300 text-gray-900 text-[16px] rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
+              <label htmlFor="password"  className="block mb-2 text-[16px] text-left  font-medium text-[#F1BA06]">ANCHO CM</label>
+              <Input type="text" name="ancho" id="password" placeholder=""  className="bg-gray-50 border border-gray-300 text-gray-900 text-[16px] rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
             </div>
-            <div  className="flex items-start">
-              <a href="#"  className="ml-auto text-white text-[14px] text-gray-100 hover:underline">Olvidaste tu contraseña?</a>
+            <div>
+              <label htmlFor="alto"  className="block mb-2 text-[16px] text-left font-medium text-[#F1BA06]">ALTO CM</label>
+              <Input type="text" name="alto" id="email"  className="bg-gray-50 border border-gray-300 text-gray-900 text-[16px] rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="" required />
             </div>
-            <Button type="submit" theme="Primary">Iniciar Sesión</Button>
+            <div>
+              <label htmlFor="password"  className="block mb-2 text-[16px] text-left  font-medium text-[#F1BA06]">CANTIDAD</label>
+              <Input type="text" name="cantitad" id="password" placeholder=""  className="bg-gray-50 border border-gray-300 text-gray-900 text-[16px] rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
+            </div>
+            <div>
+              <label htmlFor="password"  className="block mb-2 text-[16px] text-left  font-medium text-[#F1BA06]">PESO VOLUMETRICO</label>
+              <Input type="text" name="peso" id="password" placeholder=""  className="bg-gray-50 border border-gray-300 text-gray-900 text-[16px] rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
+            </div>
+     
+            <Button type="submit" theme="Primary">CALCULAR</Button>
             <div  className="text-[14px] text-center font-medium text-white">No tienes una cuenta? <Link href="/SignUp"  className="text-gray-100 hover:underline">Registrate</Link ></div>
 
           </div>

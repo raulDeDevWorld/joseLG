@@ -2,6 +2,7 @@
 import { useUser } from '@/context/Context'
 import { onAuth, signUpWithEmail, writeUserData} from '@/firebase/utils'
 import { uploadIMG } from '@/firebase/storage'
+import { Suspense } from 'react'
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
@@ -227,6 +228,7 @@ export default function Home() {
 
     console.log(counter)
     return (
+        <Suspense fallback={''}>
 
         <div className="min-h-full"
             style={{
@@ -401,6 +403,7 @@ export default function Home() {
 
 
         </div>
+        </Suspense>
     )
 }
 
