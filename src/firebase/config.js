@@ -9,8 +9,9 @@
 // };
 
 
+import { initializeApp } from 'firebase/app';
 
-export const firebaseConfig = {
+ const firebaseConfig = {
   apiKey: "AIzaSyBGuykgxxymY34XJrV32TtraUpYG8EXlB0",
   authDomain: "logistics-2024-dc168.firebaseapp.com",
   databaseURL: "https://logistics-2024-dc168-default-rtdb.firebaseio.com",
@@ -19,3 +20,6 @@ export const firebaseConfig = {
   messagingSenderId: "707217924699",
   appId: "1:707217924699:web:f39c6017d9977d5187557e"
 };
+
+
+export const app = initializeApp(firebaseConfig)
