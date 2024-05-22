@@ -2,7 +2,6 @@ import { onAuthStateChanged, getAuth, createUserWithEmailAndPassword, signInWith
 import { getDatabase, ref, onValue, set, child, get, remove, update} from "firebase/database";
 import { app } from './config'
 
-const app = initializeApp(firebaseConfig)
 
 const auth = getAuth();
 const db = getDatabase(app);
