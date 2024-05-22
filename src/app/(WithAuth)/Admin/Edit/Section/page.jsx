@@ -56,8 +56,8 @@ export default function Home() {
 
     const [textEditor, setTextEditor] = useState("")
 
-    const searchParams = useSearchParams()
-    const query = searchParams.get('item')
+    // const searchParams = useSearchParams()
+    // const query = searchParams.get('item')
 
     const [data, setData] = useState({})
     const [data2, setData2] = useState({})
@@ -90,11 +90,11 @@ export default function Home() {
     console.log(dataURL)
     function saveFrontPage(e) {
         e.preventDefault()
-        if (e.target[0].files[0]) {
-            uploadIMG(`/Cliente/${query}`, '/', query, dataURL.file, { data, tarjetas: data2 })
-        } else {
-            writeUserData(`/Cliente/${query}`, { data, tarjetas: data2 })
-        }
+        // if (e.target[0].files[0]) {
+        //     uploadIMG(`/Cliente/${query}`, '/', query, dataURL.file, { data, tarjetas: data2 })
+        // } else {
+        //     writeUserData(`/Cliente/${query}`, { data, tarjetas: data2 })
+        // }
 
         // e.target[1].files[0] && uploadIMG('frontPage', 'frontIMG', 'frontIMG', e.target[1].files[0], obj, setUserData, setUserSuccess, 'urlIMG')
         // e.target[0].files[0] === undefined && e.target[1].files[0] === undefined && writeUserData('frontPage', obj, setUserData, setUserSuccess)
@@ -187,10 +187,10 @@ export default function Home() {
         // setData(userDB)
 
 
-        if (cliente && cliente[query] && cliente[query] && cliente[query].content) {
-            setTextEditor(cliente[query].content)
-        } else {
-        }
+        // if (cliente && cliente[query] && cliente[query] && cliente[query].content) {
+        //     setTextEditor(cliente[query].content)
+        // } else {
+        // }
 
 
 
