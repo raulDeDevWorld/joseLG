@@ -1,6 +1,6 @@
 'use client';
 import { useUser } from '@/context/Context'
-import { onAuth, signUpWithEmail } from '@/firebase/utils'
+import { onAuth, signUpWithEmail, writeUserData} from '@/firebase/utils'
 import { uploadIMG } from '@/firebase/storage'
 
 import { useEffect, useState } from 'react'
@@ -75,7 +75,7 @@ export default function Home() {
     }
 
     function onChangeHandler2(e, index) {
-        setData2({ ...data2, [`item${index}`]:{ [`ip${index}`]:[`item${index}`][`ip${index}`], [`ic${index}`]:[`item${index}`][`ic${index}`], [e.target.name]: e.target.value} })
+        setData2({ ...data2, [`item${index}`]: { ...data2[`item${index}`], [e.target.name]: e.target.value } })
     }
     console.log(data2)
     function handlerImage(e) {
@@ -89,8 +89,12 @@ export default function Home() {
     console.log(dataURL)
     function saveFrontPage(e) {
         e.preventDefault()
+        if (e.target[0].files[0]) {
+            uploadIMG(`/Cliente/${query}`, '/', query, dataURL.file, { data, tarjetas: data2 })
+        } else {
+            writeUserData(`/Cliente/${query}`, { data, tarjetas: data2 })
+        }
 
-        uploadIMG(`/Cliente/${query}`, '/', query, dataURL.file, data)
         // e.target[1].files[0] && uploadIMG('frontPage', 'frontIMG', 'frontIMG', e.target[1].files[0], obj, setUserData, setUserSuccess, 'urlIMG')
         // e.target[0].files[0] === undefined && e.target[1].files[0] === undefined && writeUserData('frontPage', obj, setUserData, setUserSuccess)
     }
@@ -292,10 +296,10 @@ export default function Home() {
                     {counter.map((i, index) => {
                         return <div className="sm:col-span-3 mb-5 pb-5 border-b-[.5px] border-[#666666]">
                             <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Item principal</label>
-                            <input type="text" name={`ip${index}`} onChange={(e)=>onChangeHandler2(e, index)} className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['departamento']} />
+                            <input type="text" name={`ip${index}`} onChange={(e) => onChangeHandler2(e, index)} className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['departamento']} />
 
                             <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Item contenido</label>
-                            <input type="text" name={`ic${index}`} onChange={(e)=>onChangeHandler2(e, index)} className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['departamento']} />
+                            <input type="text" name={`ic${index}`} onChange={(e) => onChangeHandler2(e, index)} className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['departamento']} />
                         </div>
                     })
                     }

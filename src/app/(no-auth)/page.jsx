@@ -457,7 +457,7 @@ console.log(user)
 
 
 
-                {Object.entries(cliente).map((i, index)=> <Section subtitle={i[1].url} video={i[1].url} degrade='#00000067' id={i[0]}></Section>)}
+                {Object.entries(cliente).map((i, index)=> <Section subtitle={i[1].titulo} video={i[1].url} degrade='#00000067' id={i[0]}></Section>)}
 
 
 {/* 
