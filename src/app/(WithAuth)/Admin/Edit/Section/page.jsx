@@ -1,6 +1,6 @@
 'use client';
 import { useUser } from '@/context/Context'
-import { onAuth, signUpWithEmail, writeUserData} from '@/firebase/utils'
+import { onAuth, signUpWithEmail, writeUserData } from '@/firebase/utils'
 import { uploadIMG } from '@/firebase/storage'
 import { Suspense } from 'react'
 
@@ -41,13 +41,16 @@ const db = [
 
 
 
-const Button = ({ children }) => {
-    return     <Suspense ><button className='bg-[#ffbd2f] w-[200px] p-2 rounded-[5px] inline'>
-        {children}
-    </button></Suspense>
-}
+
 export default function Home() {
 
+
+
+    const Button = ({ children }) => {
+        return <Suspense ><button className='bg-[#ffbd2f] w-[200px] p-2 rounded-[5px] inline'>
+            {children}
+        </button></Suspense>
+    }
     const { user, introVideo, userDB, setUserProfile, setUserSuccess, success, setUserData, postsIMG, setUserPostsIMG, item, cliente, setCliente, cart, setCart } = useUser()
     const router = useRouter()
 
@@ -56,8 +59,8 @@ export default function Home() {
 
     const [textEditor, setTextEditor] = useState("")
 
-    // const searchParams = useSearchParams()
-    // const query = searchParams.get('item')
+    const searchParams = useSearchParams()
+    const query = searchParams.get('item')
 
     const [data, setData] = useState({})
     const [data2, setData2] = useState({})
@@ -230,116 +233,116 @@ export default function Home() {
     return (
         <Suspense >
 
-        <div className="min-h-full"
-            style={{
-                backgroundImage: 'url(/gif.gif)',
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center',
-                backgroundAttachment: 'fixed',
-                backgroundSize: 'cover'
-            }}>
+            <div className="min-h-full"
+                style={{
+                    backgroundImage: 'url(/gif.gif)',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center',
+                    backgroundAttachment: 'fixed',
+                    backgroundSize: 'cover'
+                }}>
 
 
-            <div className="fixed top-0 left-0 flex justify-center w-full h-auto bg-[#000000b4] p-0 z-40 " >
-                <form className="relative w-[95%] h-screen overflow-y-scroll lg:w-[50%] bg-white border-b border-gray-900/10 pt-16 pb-16 lg:pb-4 px-5" onSubmit={saveFrontPage} >
-                    <div className="col-span-full">
-                        <h2 className="text-base font-bold leading-7 text-gray-900  text-center p-5 ">Administrar portada principal</h2>
-                        <label htmlFor="cover-photo" className="block text-sm font-medium leading-6 text-gray-900">Foto de imagen de fondo</label>
-                        <div className="w-full flex justify-center">
-                            <div className="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10 md:w-[250px] md:h-[200px]"
-                                style={{
-                                    backgroundImage: `url('${dataURL && dataURL.frontPage && dataURL.frontPage ? dataURL.frontPage : (userDB && userDB.frontPage && userDB.frontPage.url)}')`,
-                                    backgroundSize: 'contain',
-                                    backgroundRepeat: 'no-repeat',
-                                    backgroundPosition: 'center'
-                                }}>
-                                <div className="text-center">
-                                    <svg className="mx-auto h-12 w-12 text-gray-300" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                        <path fillRule="evenodd" d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z" clipRule="evenodd" />
-                                    </svg>
-                                    <div className="mt-4 flex text-sm leading-6 text-gray-600">
-                                        <label htmlFor="fileUpload" className="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
-                                            <span>Upload a file</span>
-                                            <input id="fileUpload" name="frontPage" onChange={handlerImage} type="file" accept="video/*" className="sr-only" />
-                                        </label>
-                                        <p className="pl-1">or drag and drop</p>
+                <div className="fixed top-0 left-0 flex justify-center w-full h-auto bg-[#000000b4] p-0 z-40 " >
+                    <form className="relative w-[95%] h-screen overflow-y-scroll lg:w-[50%] bg-white border-b border-gray-900/10 pt-16 pb-16 lg:pb-4 px-5" onSubmit={saveFrontPage} >
+                        <div className="col-span-full">
+                            <h2 className="text-base font-bold leading-7 text-gray-900  text-center p-5 ">Administrar portada principal</h2>
+                            <label htmlFor="cover-photo" className="block text-sm font-medium leading-6 text-gray-900">Foto de imagen de fondo</label>
+                            <div className="w-full flex justify-center">
+                                <div className="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10 md:w-[250px] md:h-[200px]"
+                                    style={{
+                                        backgroundImage: `url('${dataURL && dataURL.frontPage && dataURL.frontPage ? dataURL.frontPage : (userDB && userDB.frontPage && userDB.frontPage.url)}')`,
+                                        backgroundSize: 'contain',
+                                        backgroundRepeat: 'no-repeat',
+                                        backgroundPosition: 'center'
+                                    }}>
+                                    <div className="text-center">
+                                        <svg className="mx-auto h-12 w-12 text-gray-300" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                            <path fillRule="evenodd" d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z" clipRule="evenodd" />
+                                        </svg>
+                                        <div className="mt-4 flex text-sm leading-6 text-gray-600">
+                                            <label htmlFor="fileUpload" className="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
+                                                <span>Upload a file</span>
+                                                <input id="fileUpload" name="frontPage" onChange={handlerImage} type="file" accept="video/*" className="sr-only" />
+                                            </label>
+                                            <p className="pl-1">or drag and drop</p>
+                                        </div>
+                                        <p className="text-xs leading-5 text-gray-600">PNG, JPG, GIF up to 10MB</p>
                                     </div>
-                                    <p className="text-xs leading-5 text-gray-600">PNG, JPG, GIF up to 10MB</p>
                                 </div>
                             </div>
-                        </div>
 
-                        <div className='flex justify-center p-5'>
-                        {/* <Suspense >
+                            <div className='flex justify-center p-5'>
+                                {/* <Suspense >
 
                             <video src={dataURL && dataURL.frontPage && dataURL.frontPage ? dataURL.frontPage : (cliente && cliente[query] && cliente[query].url)} className='h-[300px]' autoPlay loop muted ></video>
                             </Suspense > */}
 
+                            </div>
                         </div>
-                    </div>
-                    {/* <div className="sm:col-span-3">
+                        {/* <div className="sm:col-span-3">
                         <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-gray-900">Titulo</label>
                         <input type="text" name="titulo" onChange={onChangeHandler} className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={cliente && cliente[query] && cliente[query].titulo} />
                     </div> */}
-                    <div className="border-b border-gray-900/10 pb-12">
-                        <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8">
-                            <div className="sm:col-span-3">
-                                <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Contenido de texto</label>
-                                
-                                <TextEditor value={textEditor ? textEditor : 'nada'} setValue={setTextEditor} edit={true} ></TextEditor>
+                        <div className="border-b border-gray-900/10 pb-12">
+                            <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8">
+                                <div className="sm:col-span-3">
+                                    <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Contenido de texto</label>
+
+                                    <TextEditor value={textEditor ? textEditor : 'nada'} setValue={setTextEditor} edit={true} ></TextEditor>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="inline-flex">
-                        <button class="bg-red-500 text-white font-bold py-2 px-4 rounded-l">
-                            -
-                        </button>
-                        <button class="bg-green-500 text-white font-bold py-2 px-4 rounded-r" onClick={() => setCounter([...counter, ''])} >
-                            +
-                        </button>
-                    </div>
-                    {counter.map((i, index) => {
-                        return <div className="sm:col-span-3 mb-5 pb-5 border-b-[.5px] border-[#666666]">
-                            <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Item principal</label>
-                            <input type="text" name={`ip${index}`} onChange={(e) => onChangeHandler2(e, index)} className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['departamento']} />
-
-                            <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Item contenido</label>
-                            <input type="text" name={`ic${index}`} onChange={(e) => onChangeHandler2(e, index)} className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['departamento']} />
+                        <div class="inline-flex">
+                            <button class="bg-red-500 text-white font-bold py-2 px-4 rounded-l">
+                                -
+                            </button>
+                            <button class="bg-green-500 text-white font-bold py-2 px-4 rounded-r" onClick={() => setCounter([...counter, ''])} >
+                                +
+                            </button>
                         </div>
-                    })
-                    }
+                        {counter.map((i, index) => {
+                            return <div className="sm:col-span-3 mb-5 pb-5 border-b-[.5px] border-[#666666]">
+                                <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Item principal</label>
+                                <input type="text" name={`ip${index}`} onChange={(e) => onChangeHandler2(e, index)} className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['departamento']} />
+
+                                <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Item contenido</label>
+                                <input type="text" name={`ic${index}`} onChange={(e) => onChangeHandler2(e, index)} className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['departamento']} />
+                            </div>
+                        })
+                        }
 
 
-                    {
-                        cart && cart !== undefined && Object.values(cart).map((i, index) => {
-                            return <div>
-                                <h5 className='text-center col-span-2 text-[16px] p-5'>{i.nombre}</h5>
-                                <div>
-                                    <Label htmlFor="">Costo entrega en 24 hrs</Label>
-                                    <Input type="text" name={`costo 24 hrs ${i.uuid}`} styled={{ textAlign: 'center' }} reference={inputRef5} onChange={onChangeHandlerDynimic} />
-                                </div>
-                                {/* <div>
+                        {
+                            cart && cart !== undefined && Object.values(cart).map((i, index) => {
+                                return <div>
+                                    <h5 className='text-center col-span-2 text-[16px] p-5'>{i.nombre}</h5>
+                                    <div>
+                                        <Label htmlFor="">Costo entrega en 24 hrs</Label>
+                                        <Input type="text" name={`costo 24 hrs ${i.uuid}`} styled={{ textAlign: 'center' }} reference={inputRef5} onChange={onChangeHandlerDynimic} />
+                                    </div>
+                                    {/* <div>
                                     <Label htmlFor="">Costo adicional entrega inmediata</Label>
                                     <Input type="text" name={`costo inmediato ${i.uuid}`} styled={{ textAlign: 'center' }} reference={inputRef5} onChange={onChangeHandlerDynimic} />
                                 </div> */}
-                            </div>
-                        })
-                    }
+                                </div>
+                            })
+                        }
 
 
 
 
 
-                    <div className="mt-6 flex items-center justify-center gap-x-6">
-                        <Button type="submit" theme="Primary">Guardar</Button>
-                    </div>
-                    <div className="absolute w-[50px] top-5 right-5 text-white p-1 rounded-tl-lg rounded-br-lg text-center bg-red-600" onClick={close}>
-                        X
-                    </div>
-                </form>
-            </div>
-            {/* {
+                        <div className="mt-6 flex items-center justify-center gap-x-6">
+                            <Button type="submit" theme="Primary">Guardar</Button>
+                        </div>
+                        <div className="absolute w-[50px] top-5 right-5 text-white p-1 rounded-tl-lg rounded-br-lg text-center bg-red-600" onClick={close}>
+                            X
+                        </div>
+                    </form>
+                </div>
+                {/* {
                 query === 'contactos' && <div className="fixed top-0 flex justify-center w-full h-auto bg-[#000000b4] p-0 z-40">
                     <form className="relative w-[95%] h-screen overflow-y-scroll lg:w-[50%] bg-white border-b border-gray-900/10 pt-16 pb-4 px-5" onSubmit={addContact}>
                         <h2 className="text-base font-semibold leading-7 text-gray-900">Administrar contactos</h2>
@@ -406,7 +409,7 @@ export default function Home() {
 
 
 
-        </div>
+            </div>
         </Suspense>
     )
 }
