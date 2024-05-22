@@ -50,21 +50,37 @@ export default function Home() {
                 {/* <video  className='absolute top-0  w-full min-h-[100vh] object-cover z-10' autoPlay loop muted>
       <source src='underwater.mp4' type="video/mp4" />
     </video>  */}
-                <img src="/truck.png" className='absolute  w-screen h-screen bg-[#01A7EB] object-cover lg:hidden' alt="" />
+                <img src="/truck.png" className='fixed  w-screen h-screen bg-[#01A7EB] object-cover lg:hidden' alt="" />
                 <img src="/airplane-bg.jpg" className='absolute  w-screen h-screen bg-[#01A7EB] object-cover hidden md:block' alt="" />
-
-                <form className={`space-y-6 lg:space-y-3 w-[100%] rounded-[30px] max-w-[350px] z-10 lg:scale-110`} onSubmit={signInHandler} >
-                    <div className='w-full text-center flex justify-center'>
+  <div className='w-full text-center flex justify-center'>
                         <img src="/logo.svg" className='w-[300px] z-[50]' alt="User" />
                     </div>
+                <form className={`space-y-6 lg:space-y-3 w-[100%] rounded-[30px] max-w-[350px] z-10 lg:scale-110`} onSubmit={signInHandler} >
+                  
                     <br />
                     <div className='space-y-4 bg-[#00061860] p-5  rounded-[10px] lg:space-y-3 bg-white'>
 
                         <h5 className="text-[16px] text-center font-bold text-[#636363] z-[50]">CALCULO POR PESO VOLUMETRICO POR DIMENSIONES</h5>
 
                         <div class="relative z-0 w-full mb-5 group ">
-                            <input type="email" name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
-                            <label for="floating_email" class="z-50 peer-focus:font-medium absolute text-sm bg-white px-5 mx-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
+                            <input type="number" name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
+                            <label for="floating_email" class="z-50 peer-focus:font-medium absolute text-sm bg-white px-5 mx-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Largo cm</label>
+                        </div>
+                        <div class="relative z-0 w-full mb-5 group ">
+                            <input type="number" name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
+                            <label for="floating_email" class="z-50 peer-focus:font-medium absolute text-sm bg-white px-5 mx-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Ancho cm</label>
+                        </div>
+                        <div class="relative z-0 w-full mb-5 group ">
+                            <input type="number" name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
+                            <label for="floating_email" class="z-50 peer-focus:font-medium absolute text-sm bg-white px-5 mx-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Alto cm</label>
+                        </div>
+                        <div class="relative z-0 w-full mb-5 group ">
+                            <input type="number" name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
+                            <label for="floating_email" class="z-50 peer-focus:font-medium absolute text-sm bg-white px-5 mx-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Cantidad</label>
+                        </div>
+                        <div class="relative z-0 w-full mb-5 group ">
+                            <input type="number" name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
+                            <label for="floating_email" class="z-50 peer-focus:font-medium absolute text-sm bg-white px-5 mx-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Peso volumetrico</label>
                         </div>
                       
 
@@ -73,6 +89,59 @@ export default function Home() {
 
                     </div>
                 </form>
+
+                <form className={`space-y-6 lg:space-y-3 w-[100%] rounded-[30px] max-w-[350px] z-10 lg:scale-110`} onSubmit={signInHandler} >
+                  
+                  <br />
+                  <div className='space-y-4 bg-[#00061860] p-5  rounded-[10px] lg:space-y-3 bg-white'>
+
+                      <h5 className="text-[16px] text-center font-bold text-[#636363] z-[50]">CALCULO POR PESO VOLUMETRICO POR DIMENSIONES</h5>
+
+                      <div class="relative z-0 w-full mb-5 group ">
+                          <input type="number" name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
+                          <label for="floating_email" class="z-50 peer-focus:font-medium absolute text-sm bg-white px-5 mx-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Largo cm</label>
+                      </div>
+                      <div class="relative z-0 w-full mb-5 group ">
+                          <input type="number" name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
+                          <label for="floating_email" class="z-50 peer-focus:font-medium absolute text-sm bg-white px-5 mx-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Ancho cm</label>
+                      </div>
+                      <div class="relative z-0 w-full mb-5 group ">
+                          <input type="number" name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
+                          <label for="floating_email" class="z-50 peer-focus:font-medium absolute text-sm bg-white px-5 mx-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Alto cm</label>
+                      </div>
+                    
+                    
+
+                      <Button type="submit" theme="Primary">CALCULAR</Button>
+                      <div className="text-[14px] text-center font-medium text-white">No tienes una cuenta? <Link href="/SignUp" className="text-gray-100 hover:underline">Registrate</Link ></div>
+
+                  </div>
+              </form>
+
+              <form className={`space-y-6 lg:space-y-3 w-[100%] rounded-[30px] max-w-[350px] z-10 lg:scale-110`} onSubmit={signInHandler} >
+                  
+                  <br />
+                  <div className='space-y-4 bg-[#00061860] p-5  rounded-[10px] lg:space-y-3 bg-white'>
+
+                      <h5 className="text-[16px] text-center font-bold text-[#636363] z-[50]">CALCULO POR PESO VOLUMETRICO POR DIMENSIONES</h5>
+
+                      <div class="relative z-0 w-full mb-5 group ">
+                          <input type="number" name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
+                          <label for="floating_email" class="z-50 peer-focus:font-medium absolute text-sm bg-white px-5 mx-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Largo cm</label>
+                      </div>
+                      <div class="relative z-0 w-full mb-5 group ">
+                          <input type="number" name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
+                          <label for="floating_email" class="z-50 peer-focus:font-medium absolute text-sm bg-white px-5 mx-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Ancho cm</label>
+                      </div>
+           
+                    
+                    
+
+                      <Button type="submit" theme="Primary">CALCULAR</Button>
+                      <div className="text-[14px] text-center font-medium text-white">No tienes una cuenta? <Link href="/SignUp" className="text-gray-100 hover:underline">Registrate</Link ></div>
+
+                  </div>
+              </form>
             </div>
 
             {success == 'AccountNonExist' && <Error>Cuenta inexistente</Error>}

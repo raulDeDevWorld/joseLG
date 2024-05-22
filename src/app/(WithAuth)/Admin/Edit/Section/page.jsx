@@ -270,17 +270,17 @@ export default function Home() {
                         </div>
 
                         <div className='flex justify-center p-5'>
-                        <Suspense >
+                        {/* <Suspense >
 
                             <video src={dataURL && dataURL.frontPage && dataURL.frontPage ? dataURL.frontPage : (cliente && cliente[query] && cliente[query].url)} className='h-[300px]' autoPlay loop muted ></video>
-                            </Suspense >
+                            </Suspense > */}
 
                         </div>
                     </div>
-                    <div className="sm:col-span-3">
+                    {/* <div className="sm:col-span-3">
                         <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-gray-900">Titulo</label>
                         <input type="text" name="titulo" onChange={onChangeHandler} className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={cliente && cliente[query] && cliente[query].titulo} />
-                    </div>
+                    </div> */}
                     <div className="border-b border-gray-900/10 pb-12">
                         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8">
                             <div className="sm:col-span-3">
@@ -339,7 +339,7 @@ export default function Home() {
                     </div>
                 </form>
             </div>
-            {
+            {/* {
                 query === 'contactos' && <div className="fixed top-0 flex justify-center w-full h-auto bg-[#000000b4] p-0 z-40">
                     <form className="relative w-[95%] h-screen overflow-y-scroll lg:w-[50%] bg-white border-b border-gray-900/10 pt-16 pb-4 px-5" onSubmit={addContact}>
                         <h2 className="text-base font-semibold leading-7 text-gray-900">Administrar contactos</h2>
@@ -396,7 +396,7 @@ export default function Home() {
                             X
                         </div>
                     </form>
-                </div>}
+                </div>} */}
 
 
 
