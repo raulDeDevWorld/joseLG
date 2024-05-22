@@ -116,11 +116,11 @@ export default function BottomNavigation({ rol }) {
                                     <img src="/icons/TIPOS DE CONTENEDORES.png" className="w-[40px]" alt="" />
                                     <span className="text-[12px] font-bold text-center">Contenedores aereos</span>
                                 </Link>
-                                <Link href='/' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
+                                <Link href='/Calculadora' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
                                     <img src="/icons/CALCULADORA DE PESO CARGABLE.png" className="w-[40px]" alt="" />
                                     <span className="text-[12px] font-bold text-center">Calculadora de peso cargable  </span>
                                 </Link>
-                                <Link href='/' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
+                                <Link href='/Calculadora' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
                                     <img src="/icons/CALCULADORA DE PESO CARGABLE.png" className="w-[40px]" alt="" />
                                     <span className="text-[12px] font-bold text-center">Calculadora de conversiones  </span>
                                 </Link>
@@ -246,11 +246,11 @@ export default function BottomNavigation({ rol }) {
                         <img src="/icons/TIPOS DE CONTENEDORES.png" className="w-[40px]" alt="" />
                         <span className="text-[12px] font-bold text-center">Contenedores aereos</span>
                     </Link>
-                    <Link href='/' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
+                    <Link href='/Calculadora' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
                         <img src="/icons/CALCULADORA DE PESO CARGABLE.png" className="w-[40px]" alt="" />
                         <span className="text-[12px] font-bold text-center">Calculadora de peso cargable  </span>
                     </Link>
-                    <Link href='/' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
+                    <Link href='/Calculadora' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
                         <img src="/icons/CALCULADORA DE PESO CARGABLE.png" className="w-[40px]" alt="" />
                         <span className="text-[12px] font-bold text-center">Calculadora de conversiones  </span>
                     </Link>
