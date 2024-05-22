@@ -45,7 +45,7 @@ export default function Home() {
                 backgroundSize: 'cover'
             }}>
 
-            <div className=' w-screen pt-[50px] min-h-screen bg-gradient-to-t from-[#00061860] to-[#000618d1] flex flex-col justify-center items-center  z-[50]'>
+            <div className=' w-screen pt-[50px] min-h-screen bg-gradient-to-t from-[#00061860] to-[#000618d1] flex flex-col justify-center items-center  z-10'>
 
                 {/* <video  className='absolute top-0  w-full min-h-[100vh] object-cover z-10' autoPlay loop muted>
       <source src='underwater.mp4' type="video/mp4" />
@@ -54,7 +54,7 @@ export default function Home() {
                 <img src="/truck.png" className='fixed top-0 w-screen h-screen bg-[#01A7EB] object-cover lg:hidden' alt="" />
                 <img src="/airplane-bg.jpg" className='fixed top-0  w-screen h-screen bg-[#01A7EB] object-cover hidden md:block' alt="" />
                 <div className='w-full text-center flex justify-center'>
-                    <img src="/logo.svg" className='w-[300px] z-[50]' alt="User" />
+                    <img src="/logo.svg" className='w-[300px] z-10' alt="User" />
                 </div>
                 <form className={`space-y-6 lg:space-y-3 w-[100%] rounded-[30px] max-w-[350px] z-10 lg:scale-110`} onSubmit={signInHandler} >
 
