@@ -60,7 +60,7 @@ export default function Home() {
     const [textEditor, setTextEditor] = useState("")
 
     // const searchParams = useSearchParams()
-    const query = window.location.href.split('=')[1]
+    const [query, setQuery] = useState('')
 
     const [data, setData] = useState({})
     const [data2, setData2] = useState({})
@@ -194,7 +194,7 @@ export default function Home() {
         //     setTextEditor(cliente[query].content)
         // } else {
         // }
-
+        setQuery(window.location.href.split('=')[1])
 
 
         // item && userDB && userDB.services && userDB.services[item]['servicio remoto'] && setCheck(userDB.services[item]['servicio remoto'])
