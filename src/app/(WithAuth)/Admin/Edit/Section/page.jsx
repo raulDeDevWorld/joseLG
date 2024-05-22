@@ -47,7 +47,7 @@ const Button = ({ children }) => {
 }
 export default function Home() {
 
-    const { user, introVideo, userDB, setUserProfile, setUserSuccess, success, setUserData, postsIMG, setUserPostsIMG, item, cliente, setCliente,} = useUser()
+    const { user, introVideo, userDB, setUserProfile, setUserSuccess, success, setUserData, postsIMG, setUserPostsIMG, item, cliente, setCliente, } = useUser()
     const router = useRouter()
 
 
@@ -70,7 +70,7 @@ export default function Home() {
     function onChangeHandler(e) {
         setData({ ...data, [e.target.name]: e.target.value })
     }
-console.log(data)
+    console.log(data)
     function handlerImage(e) {
         setDataURL({
             ...dataURL,
@@ -82,8 +82,8 @@ console.log(data)
     console.log(dataURL)
     function saveFrontPage(e) {
         e.preventDefault()
-       
-        uploadIMG(`/Cliente/${query}`, '/', query, dataURL.frontPage, data)
+
+        uploadIMG(`/Cliente/${query}`, '/', query, dataURL.file, data)
         // e.target[1].files[0] && uploadIMG('frontPage', 'frontIMG', 'frontIMG', e.target[1].files[0], obj, setUserData, setUserSuccess, 'urlIMG')
         // e.target[0].files[0] === undefined && e.target[1].files[0] === undefined && writeUserData('frontPage', obj, setUserData, setUserSuccess)
     }
@@ -170,15 +170,15 @@ console.log(data)
 
 
 
- 
+
     useEffect(() => {
         // setData(userDB)
 
 
         if (cliente && cliente[query] && cliente[query] && cliente[query].content) {
             setTextEditor(cliente[query].content)
-          } else {
-          }
+        } else {
+        }
 
 
 
@@ -247,7 +247,7 @@ console.log(data)
                                     <div className="mt-4 flex text-sm leading-6 text-gray-600">
                                         <label htmlFor="fileUpload" className="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
                                             <span>Upload a file</span>
-                                            <input id="fileUpload" name="frontPage" onChange={handlerImage} type="file" className="sr-only" />
+                                            <input id="fileUpload" name="frontPage" onChange={handlerImage} type="file" accept="video/*" className="sr-only" />
                                         </label>
                                         <p className="pl-1">or drag and drop</p>
                                     </div>
@@ -281,64 +281,64 @@ console.log(data)
                     </div>
                 </form>
             </div>
-{
-      query === 'contactos' &&     <div className="fixed top-0 flex justify-center w-full h-auto bg-[#000000b4] p-0 z-40">
-                <form className="relative w-[95%] h-screen overflow-y-scroll lg:w-[50%] bg-white border-b border-gray-900/10 pt-16 pb-4 px-5" onSubmit={addContact}>
-                    <h2 className="text-base font-semibold leading-7 text-gray-900">Administrar contactos</h2>
+            {
+                query === 'contactos' && <div className="fixed top-0 flex justify-center w-full h-auto bg-[#000000b4] p-0 z-40">
+                    <form className="relative w-[95%] h-screen overflow-y-scroll lg:w-[50%] bg-white border-b border-gray-900/10 pt-16 pb-4 px-5" onSubmit={addContact}>
+                        <h2 className="text-base font-semibold leading-7 text-gray-900">Administrar contactos</h2>
 
-                    <div className="border-b border-gray-900/10 pb-12">
-                        <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                            <div className="sm:col-span-3">
-                                <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Departamento</label>
-                                <input type="text" name="departamento" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['departamento']} />
-                            </div>
-                            <div className="sm:col-span-3">
-                                <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Dirección 1</label>
-                                <input type="text" name="direccion 1" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['direccion 1']} />
-                            </div>
-                            <div className="sm:col-span-3">
-                                <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Dirección 2</label>
-                                <input type="text" name="direccion 2" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['direccion 2']} />
-                            </div>
-                            <div className="sm:col-span-3">
-                                <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Telefono</label>
-                                <input type="text" name="telefono" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['telefono']} />
-                            </div>
-                            <div className="sm:col-span-3">
-                                <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Celular</label>
-                                <input type="text" name="celular" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['celular']} />
-                            </div>
-                            <div className="sm:col-span-3">
-                                <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Facebook</label>
-                                <input type="text" name="facebook" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['facebook']} />
-                            </div>
-                            <div className="sm:col-span-3">
-                                <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">TiK Tok</label>
-                                <input type="text" name="twiter" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['twiter']} />
-                            </div>
-                            <div className="sm:col-span-3">
-                                <label htmlFor="first-name" className="block 
+                        <div className="border-b border-gray-900/10 pb-12">
+                            <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                                <div className="sm:col-span-3">
+                                    <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Departamento</label>
+                                    <input type="text" name="departamento" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['departamento']} />
+                                </div>
+                                <div className="sm:col-span-3">
+                                    <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Dirección 1</label>
+                                    <input type="text" name="direccion 1" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['direccion 1']} />
+                                </div>
+                                <div className="sm:col-span-3">
+                                    <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Dirección 2</label>
+                                    <input type="text" name="direccion 2" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['direccion 2']} />
+                                </div>
+                                <div className="sm:col-span-3">
+                                    <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Telefono</label>
+                                    <input type="text" name="telefono" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['telefono']} />
+                                </div>
+                                <div className="sm:col-span-3">
+                                    <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Celular</label>
+                                    <input type="text" name="celular" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['celular']} />
+                                </div>
+                                <div className="sm:col-span-3">
+                                    <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Facebook</label>
+                                    <input type="text" name="facebook" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['facebook']} />
+                                </div>
+                                <div className="sm:col-span-3">
+                                    <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">TiK Tok</label>
+                                    <input type="text" name="twiter" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['twiter']} />
+                                </div>
+                                <div className="sm:col-span-3">
+                                    <label htmlFor="first-name" className="block 
                                   text-sm font-medium leading-6 text-gray-900">Gmail</label>
-                                <input type="text" name="gmail" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['gmail']} />
-                            </div>
-                            <div className="sm:col-span-3">
-                                <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Instagram</label>
-                                <input type="text" name="instagram" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['instagram']} />
-                            </div>
-                            <div className="sm:col-span-3">
-                                <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Linkedin</label>
-                                <input type="text" name="linkedin" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['linkedin']} />
+                                    <input type="text" name="gmail" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['gmail']} />
+                                </div>
+                                <div className="sm:col-span-3">
+                                    <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Instagram</label>
+                                    <input type="text" name="instagram" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['instagram']} />
+                                </div>
+                                <div className="sm:col-span-3">
+                                    <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Linkedin</label>
+                                    <input type="text" name="linkedin" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['linkedin']} />
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="mt-6 flex items-center justify-end gap-x-6">
-                        <Button type="submit" theme="Primary" >Guardar</Button>
-                    </div>
-                    <div className="absolute w-[50px] top-5 right-5 text-white p-1 rounded-tl-lg rounded-br-lg text-center bg-red-600" onClick={close}>
-                        X
-                    </div>
-                </form>
-            </div>}
+                        <div className="mt-6 flex items-center justify-end gap-x-6">
+                            <Button type="submit" theme="Primary" >Guardar</Button>
+                        </div>
+                        <div className="absolute w-[50px] top-5 right-5 text-white p-1 rounded-tl-lg rounded-br-lg text-center bg-red-600" onClick={close}>
+                            X
+                        </div>
+                    </form>
+                </div>}
 
 
 
