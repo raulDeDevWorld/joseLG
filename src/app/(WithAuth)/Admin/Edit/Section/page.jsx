@@ -17,7 +17,7 @@ import Input from '@/components/Input'
 import { useRouter } from 'next/navigation';
 import Subtitle from '@/components/Subtitle'
 import TextEditor from '@/components/TextEditor'
-import { useSearchParams } from 'next/navigation'
+// import { useSearchParams } from 'next/navigation'
 
 const db = [
     {
@@ -56,11 +56,11 @@ export default function Home() {
 
     const [counter, setCounter] = useState([''])
 
-
+   console.log(window.location.href.split('=')[1]) 
     const [textEditor, setTextEditor] = useState("")
 
-    const searchParams = useSearchParams()
-    const query = searchParams.get('item')
+    // const searchParams = useSearchParams()
+    const query = window.location.href.split('=')[1]
 
     const [data, setData] = useState({})
     const [data2, setData2] = useState({})
