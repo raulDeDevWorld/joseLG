@@ -47,9 +47,10 @@ const Button = ({ children }) => {
 }
 export default function Home() {
 
-    const { user, introVideo, userDB, setUserProfile, setUserSuccess, success, setUserData, postsIMG, setUserPostsIMG, item, cliente, setCliente, } = useUser()
+    const { user, introVideo, userDB, setUserProfile, setUserSuccess, success, setUserData, postsIMG, setUserPostsIMG, item, cliente, setCliente, cart, setCart } = useUser()
     const router = useRouter()
 
+    const [counter, setCounter] = useState([''])
 
 
     const [textEditor, setTextEditor] = useState("")
@@ -58,6 +59,8 @@ export default function Home() {
     const query = searchParams.get('item')
 
     const [data, setData] = useState({})
+    const [data2, setData2] = useState({})
+
     const [dataURL, setDataURL] = useState({})
     const [check, setCheck] = useState(false)
     // const inputRefWhatsApp = useMask({ mask: '+ 591 __ ___ ___', replacement: { _: /\d/ } });
@@ -70,7 +73,11 @@ export default function Home() {
     function onChangeHandler(e) {
         setData({ ...data, [e.target.name]: e.target.value })
     }
-    console.log(data)
+
+    function onChangeHandler2(e, index) {
+        setData2({ ...data2, [`item${index}`]:{ [`ip${index}`]:[`item${index}`][`ip${index}`], [`ic${index}`]:[`item${index}`][`ic${index}`], [e.target.name]: e.target.value} })
+    }
+    console.log(data2)
     function handlerImage(e) {
         setDataURL({
             ...dataURL,
@@ -160,8 +167,8 @@ export default function Home() {
     }
 
     function close(e) {
-        setUserModal(false)
-        setCheck(false)
+        // setUserModal(false)
+        // setCheck(false)
         router.back()
     }
     console.log(item)
@@ -214,7 +221,7 @@ export default function Home() {
 
 
 
-    console.log(cliente)
+    console.log(counter)
     return (
 
         <div className="min-h-full"
@@ -273,6 +280,47 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
+
+                    <div class="inline-flex">
+                        <button class="bg-red-500 text-white font-bold py-2 px-4 rounded-l">
+                            -
+                        </button>
+                        <button class="bg-green-500 text-white font-bold py-2 px-4 rounded-r" onClick={() => setCounter([...counter, ''])} >
+                            +
+                        </button>
+                    </div>
+                    {counter.map((i, index) => {
+                        return <div className="sm:col-span-3 mb-5 pb-5 border-b-[.5px] border-[#666666]">
+                            <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Item principal</label>
+                            <input type="text" name={`ip${index}`} onChange={(e)=>onChangeHandler2(e, index)} className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['departamento']} />
+
+                            <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Item contenido</label>
+                            <input type="text" name={`ic${index}`} onChange={(e)=>onChangeHandler2(e, index)} className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['departamento']} />
+                        </div>
+                    })
+                    }
+
+
+                    {
+                        cart && cart !== undefined && Object.values(cart).map((i, index) => {
+                            return <div>
+                                <h5 className='text-center col-span-2 text-[16px] p-5'>{i.nombre}</h5>
+                                <div>
+                                    <Label htmlFor="">Costo entrega en 24 hrs</Label>
+                                    <Input type="text" name={`costo 24 hrs ${i.uuid}`} styled={{ textAlign: 'center' }} reference={inputRef5} onChange={onChangeHandlerDynimic} />
+                                </div>
+                                {/* <div>
+                                    <Label htmlFor="">Costo adicional entrega inmediata</Label>
+                                    <Input type="text" name={`costo inmediato ${i.uuid}`} styled={{ textAlign: 'center' }} reference={inputRef5} onChange={onChangeHandlerDynimic} />
+                                </div> */}
+                            </div>
+                        })
+                    }
+
+
+
+
+
                     <div className="mt-6 flex items-center justify-center gap-x-6">
                         <Button type="submit" theme="Primary">Guardar</Button>
                     </div>
