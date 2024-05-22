@@ -42,9 +42,9 @@ const db = [
 
 
 const Button = ({ children }) => {
-    return <button className='bg-[#ffbd2f] w-[200px] p-2 rounded-[5px] inline'>
+    return     <Suspense ><button className='bg-[#ffbd2f] w-[200px] p-2 rounded-[5px] inline'>
         {children}
-    </button>
+    </button></Suspense>
 }
 export default function Home() {
 
@@ -228,7 +228,7 @@ export default function Home() {
 
     console.log(counter)
     return (
-        <Suspense fallback={''}>
+        <Suspense >
 
         <div className="min-h-full"
             style={{
