@@ -42,15 +42,15 @@ const db = [
 
 
 function Componente({ title, image, paragraph }) {
-  return <div  className='bg-[#ffffffcb] my-5 flex  lg:max-w-[500px] lg:text-[18px] lg:mx-5 lg:flex lg:flex-col lg:justify-center lg:items-center rounded-[15px]'>
-    <img src={image}  className=" w-[150px] lg:max-w-[200px] object-contain p-5" alt="" />
-    <div  className="w-full bg-[#2e62d1ce] p-5 py-5 rounded-b-[15px]">
-      <h4  className="w-full text-left font-medium border-b-[3px] text-white pb-5 pl-0 ml-0 border-[#ffffff] p-5">{title}</h4>
-      <p  className="text-white " >
+  return <div className='bg-[#ffffffcb] my-5 flex  lg:max-w-[500px] lg:text-[18px] lg:mx-5 lg:flex lg:flex-col lg:justify-center lg:items-center rounded-[15px]'>
+    <img src={image} className=" w-[150px] lg:max-w-[200px] object-contain p-5" alt="" />
+    <div className="w-full bg-[#2e62d1ce] p-5 py-5 rounded-b-[15px]">
+      <h4 className="w-full text-left font-medium border-b-[3px] text-white pb-5 pl-0 ml-0 border-[#ffffff] p-5">{title}</h4>
+      <p className="text-white " >
         {paragraph}
       </p>
-      <div  className="relative flex justify-end w-[100%]">
-        <button  className="inline-block bg-[#ffb834] px-3 text-[12px] border text-center font-medium py-2 m-1  
+      <div className="relative flex justify-end w-[100%]">
+        <button className="inline-block bg-[#ffb834] px-3 text-[12px] border text-center font-medium py-2 m-1  
          cursor-pointer rounded-[5px]">Saber mas</button>
       </div>
     </div>
@@ -65,15 +65,15 @@ function Item({ e1, e2 }) {
 
     }}
     initiallyVisible={true}>
-    <div  className='flex flex-col justify-center items-center'>
-      <span  className='text-[30px] font-medium'>{e1}</span>
-      <span  className='text-center'>{e2}</span>
+    <div className='flex flex-col justify-center items-center'>
+      <span className='text-[30px] font-medium'>{e1}</span>
+      <span className='text-center'>{e2}</span>
     </div>
   </ScrollAnimation>
 }
 
 function Section({ subtitle, video, gradiente, id, children }) {
-  return <section  className='relative w-full bg-[#4f8cc5] overflow-x-hidden overflow-hidden' id={id}>
+  return <section className='relative w-full bg-[#4f8cc5] overflow-x-hidden overflow-hidden' id={id}>
 
 
 
@@ -88,19 +88,19 @@ function Section({ subtitle, video, gradiente, id, children }) {
     {/* <div  className='absolute px-5 py-12 w-full min-h-screen flex flex-col z-30 lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#000000c5] via-[#3259c5a9] to-[#2A52BE]'>
           </div> */}
 
-    <div  className='relative px-5 py-12 w-full min-h-[50vh] mflex flex-col z-50 lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#000000c5] via-[#3259c5a9] to-[#2A52BE] '>
+    <div className='relative px-5 py-12 w-full min-h-[50vh] mflex flex-col z-50 lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#000000c5] via-[#3259c5a9] to-[#2A52BE] '>
       <div>
-        <Subtitle><h3  className='text-[30px] text-[white] text-center font-medium  py-10'>{subtitle}</h3></Subtitle>
+        <Subtitle><h3 className='text-[30px] text-[white] text-center font-medium  py-10'>{subtitle}</h3></Subtitle>
         <ScrollAnimation animateIn='bounceInRight'
           animateOut='bounceOutLeft'
           initiallyVisible={true}
         >
-          <p  className=' text-[16px] text-[white]'>
+          <p className=' text-[16px] text-[white]'>
             Nuestro servicio de transporte terrestre nacional e internacional se caracteriza por ser adaptable de acuerdo a su negocio, realizamos transportes locales, interdepartamentales e internacionales en las modalidades ftl (full-truckload) y ltl (less-than-truckload), para carga general, refrigerada, maquinarias y mercancías peligrosas.
           </p>
         </ScrollAnimation>
       </div>
-      <div  className='w-full text-[white] grid grid-cols-2 gap-5 py-12'>
+      <div className='w-full text-[white] grid grid-cols-2 gap-5 py-12'>
 
         <Item e1={'1 a 2tn'} e2={'Camionetas'} />
         <Item e1={'hasta 20tn'} e2={'Camiones'} />
@@ -109,7 +109,7 @@ function Section({ subtitle, video, gradiente, id, children }) {
         <Item e1={'2017'} e2={'AÑO DE FUNDACIÓN'} />
 
       </div>
-      <div  className='grid grid-cols-2 gap-2 w-full '>
+      <div className='grid grid-cols-2 gap-2 w-full '>
         <span></span>
         {/* <button type="button" className="w-full  border-[2px]  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
   Contactar
@@ -128,10 +128,10 @@ function Section({ subtitle, video, gradiente, id, children }) {
 
       </div>
     </div>
-    <div  className='relative min-h-screen w-full flex flex-col lg:flex-wrap  lg:flex-row lg:justify-center justify-top z-20 '>
+    <div className='relative min-h-screen w-full flex flex-col lg:flex-wrap  lg:flex-row lg:justify-center justify-top z-20 '>
       {/* <Subtitle> <h2  className="w-[100vw] text-[white] text-center text-[25px] font-medium">{subtitle}</h2></Subtitle> */}
 
-      <video  className='absolute bottom-0  w-full h-full min-h-[100vh] object-cover z-10' autoPlay loop muted>
+      <video className='absolute bottom-0  w-full h-full min-h-[100vh] object-cover z-10' autoPlay loop muted>
         <source src={video} type="video/mp4" />
       </video>
 
@@ -146,7 +146,7 @@ function Section({ subtitle, video, gradiente, id, children }) {
 
 
       {db.map((i, index) => {
-        return <div  className='inline px-5 z-50' key={index}>
+        return <div className='inline px-5 z-50' key={index}>
           <Componente title={i.title} image={i.image} paragraph={i.paragraph} />
         </div>
       })}
@@ -183,41 +183,41 @@ export default function Home() {
     QRreaderUtils(e, setFilterQR,)
   }
 
-console.log(user)
+  console.log(user)
   useEffect(() => {
     // user === undefined && onAuth(setUserProfile)
     // if (user !== undefined && user !== null) router.replace('/Cliente')
   }, [user])
 
   return (
-    <main  className={`relative h-screen w-screen `}>
+    <main className={`relative h-screen w-screen `}>
 
 
 
-      <section  className=' '>
+      <section className=' '>
 
 
-        <video  className='fixed bottom-0 w-full h-[100vh] pb-[10px] object-cover object-bottom ' autoPlay loop muted>
+        <video className='fixed bottom-0 w-full h-[100vh] pb-[10px] object-cover object-bottom ' autoPlay loop muted>
           <source src={"/container(720p).mp4"} type="video/mp4" />
         </video>
 
-        <div  className='absolute top-0  w-full h-[100vh] object-cover z-10 bg-[#1969ff67]'></div>
+        <div className='absolute top-0  w-full h-[100vh] object-cover z-10 bg-[#1969ff67]'></div>
 
 
-        <div  className='relative min-h-[100vh] py-[50px] w-full lg:pt-10 pb-0 flex flex-col justify-around lg:flex-row items-center  z-20' style={{ background: '-gradient(to bottom, #000000,  #000000c7, #00000050' }}>
-
-
-
-          <img src='/logo-comp.gif'  className='inline-block w-[80vw] h-[80vw]  lg:flex justify-center items-end lg:w-[40vw] lg:h-[70vh]  object-cover object-center ' />
+        <div className='relative min-h-[100vh] py-[50px] w-full lg:pt-10 pb-0 flex flex-col justify-around lg:flex-row items-center  z-20' style={{ background: '-gradient(to bottom, #000000,  #000000c7, #00000050' }}>
 
 
 
-          <div  className='lg:scale-150 bg-[#00000083] p-5'>
-            <div  className='   font-bold'>
+          <img src='/logo-comp.gif' className='inline-block w-[80vw] h-[80vw]  lg:flex justify-center items-end lg:w-[40vw] lg:h-[70vh]  object-cover object-center ' />
+
+
+
+          <div className='lg:scale-150 bg-[#00000083] p-5'>
+            <div className='   font-bold'>
               <TextMaquina />
             </div>
             <br />
-            <div  className='grid grid-cols-2 gap-2 w-full '>
+            <div className='grid grid-cols-2 gap-2 w-full '>
 
               <button type="button" onClick={() => redirectHandlerWindow(`https://api.whatsapp.com/send?phone=+59176586948&text=hola%20Logistics%20Gear`)} className="w-full  border-[2px]  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
                 Contactar
@@ -238,7 +238,7 @@ console.log(user)
 
 
 
-            <div  className='bg-[#ffffffc7] p-5'>
+            <div className='bg-[#ffffff] p-5'>
               <ul className="flex border-b border-[blue] ">
                 <li className={`-mb-px mr-1 ${element === 'TRACKING' && 'bg-[#F7BE38] border border-[blue] border-b-transparent'}`} onClick={() => setElement('TRACKING')}>
                   <a className=" inline-block rounded-t py-2 px-2 text-blue-700 font-semibold" href="#">Tracking</a>
@@ -259,7 +259,7 @@ console.log(user)
                 <div className="flex w-full ">
                   <label htmlFor="location-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
                   <div className="relative w-full">
-                    <input type="search" id="location-search" className="block p-3 w-full h-full z-20 text-sm text-gray-900   rounded-[5px] focus:ring-blue-500 focus:border-blue-500" placeholder="Codigo de tracking" required />
+                    <input type="search" id="location-search" className="block p-3 w-full h-full z-20 text-sm text-gray-900 border shadow-xl  rounded-[5px] focus:ring-blue-500 focus:border-blue-500" placeholder="Codigo de tracking" required />
                     <button type="submit" className="absolute top-0 end-0 h-full p-2.5 text-sm font-medium text-white bg-blue-700 rounded-r-[5px] border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
                       <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
@@ -273,7 +273,7 @@ console.log(user)
 
                 </div>
 
-                <label htmlFor="qr"  className='bg-[#F7BE38] border-[2px] border-[#0000002d] p-2 rounded-[5px]'>
+                <label htmlFor="qr" className='bg-[#F7BE38] border-[2px] border-[#0000002d] p-2 rounded-[5px]'>
                   <svg width="20" height="20" viewBox="0 0 323 323" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M138.71 0.669922H12.4399C9.25734 0.669922 6.20509 1.93419 3.95465 4.18463C1.70421 6.43507 0.439941 9.48732 0.439941 12.6699V138.93C0.439941 142.112 1.70421 145.165 3.95465 147.415C6.20509 149.666 9.25734 150.93 12.4399 150.93H138.71C141.893 150.93 144.945 149.666 147.195 147.415C149.446 145.165 150.71 142.112 150.71 138.93V12.6699C150.71 9.48732 149.446 6.43507 147.195 4.18463C144.945 1.93419 141.893 0.669922 138.71 0.669922ZM129.24 43.5999V129.47H21.9099V22.1299H129.24V43.5999Z" fill="black" />
                     <path d="M95.7799 43.6001H55.3799C52.1973 43.6001 49.145 44.8644 46.8946 47.1148C44.6442 49.3652 43.3799 52.4175 43.3799 55.6001V96.0001C43.3799 99.1827 44.6442 102.235 46.8946 104.485C49.145 106.736 52.1973 108 55.3799 108H95.7799C98.9625 108 102.015 106.736 104.265 104.485C106.516 102.235 107.78 99.1827 107.78 96.0001V55.6001C107.78 52.4175 106.516 49.3652 104.265 47.1148C102.015 44.8644 98.9625 43.6001 95.7799 43.6001Z" fill="black" />
@@ -291,7 +291,7 @@ console.log(user)
                     <path d="M138.71 172.4H12.4399C9.25734 172.4 6.20509 173.664 3.95465 175.915C1.70421 178.165 0.439941 181.217 0.439941 184.4V310.67C0.439941 313.852 1.70421 316.905 3.95465 319.155C6.20509 321.406 9.25734 322.67 12.4399 322.67H138.71C141.893 322.67 144.945 321.406 147.195 319.155C149.446 316.905 150.71 313.852 150.71 310.67V184.4C150.71 181.217 149.446 178.165 147.195 175.915C144.945 173.664 141.893 172.4 138.71 172.4ZM129.24 215.33V301.2H21.9099V193.87H129.24V215.33Z" fill="black" />
                   </svg>
                 </label>
-                <input id="qr" type="file"  className='hidden' onChange={HandlerOnChange} accept="image/* " />
+                <input id="qr" type="file" className='hidden' onChange={HandlerOnChange} accept="image/* " />
 
 
               </form>}
@@ -299,14 +299,12 @@ console.log(user)
 
               {element === 'FCL' &&
                 <form className="max-w-md py-5">
-                  <div className="relative z-0 w-full mb-5 group  ">
-                    <input type="search" id="location-search" className="block p-3 w-full h-full z-20 text-sm text-gray-900   rounded-[5px] focus:ring-blue-500 focus:border-blue-500" placeholder="Origen" required />
-                    {/* <label htmlFor="floating_email" className="peer-focus:font-medium z-30 absolute text-sm text-gray-500 duration-300 transform -translate-y-10 scale-75 top-3  origin-[0px] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Origen</label> */}
+                  <div class="relative z-0 w-full mb-5 group ">
+                    <input type="email" name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
+                    <label for="floating_email" class="z-50 peer-focus:font-medium absolute text-sm bg-white px-5 mx-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
                   </div>
-                  <div className="relative z-0 w-full mb-5 group">
-                    <input type="search" id="location-search" className="block p-3 w-full h-full z-20 text-sm text-gray-900   rounded-[5px] focus:ring-blue-500 focus:border-blue-500" placeholder="Destino" required />
-                    {/* <label htmlFor="floating_password" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Destino</label> */}
-                  </div>
+                
+
 
 
                   <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Continuar</button>
@@ -346,7 +344,7 @@ console.log(user)
             </div> */}
             <a href="tel:76586948">
 
-              <marquee  className="text-white py-5" behavior="" direction="">Llamanos ya clickea aqui (+591) 76586948</marquee>
+              <marquee className="text-white py-5" behavior="" direction="">Llamanos ya clickea aqui (+591) 76586948</marquee>
 
             </a>
           </div>
@@ -358,24 +356,24 @@ console.log(user)
 
       </section>
 
-      <section  className='w-full z-1000 overflow-x-hidden' id="Servicios">
+      <section className='w-full z-1000 overflow-x-hidden' id="Servicios">
 
-        <div  className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#000000c5] via-[#3259c5a9] to-[#2A52BE]'>
+        <div className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#000000c5] via-[#3259c5a9] to-[#2A52BE]'>
           <div>
             {/* <div  className='relative px-5 py-12 w-full flex flex-col  lg:flex-row justify-around items-center  bg-gradient-to-tr from-[#2A52BE] via-[#3259c5] to-[#2A52BE]'>
           <div> */}
-            <Subtitle><h3  className='text-[30px] text-[white] text-center font-medium  py-5'>Logistics Gear</h3></Subtitle>
+            <Subtitle><h3 className='text-[30px] text-[white] text-center font-medium  py-5'>Logistics Gear</h3></Subtitle>
             <ScrollAnimation animateIn='bounceInRight'
               animateOut='bounceOutLeft'
               initiallyVisible={true}
             >
-              <p  className=' text-[16px] text-[white]'>
+              <p className=' text-[16px] text-[white]'>
                 Establecida en 2017 y operando bajo la razón social Engranaje de la Logística Ltda., se especializa en ofrecer soluciones integrales de logística y transporte de carga. Nuestra experticia abarca desde la gestión de importaciones y exportaciones hasta el transporte de cargas de proyecto. Estamos especialmente capacitados en el manejo de cargas de grandes volúmenes, pesadas y sobredimensionadas. Nuestra filosofía se centra en la integración eficiente de los procesos logísticos, lo que nos permite optimizar el flujo de trabajo y reducir costos, asegurando que su negocio avance con eficiencia y confiabilidad.
               </p>
             </ScrollAnimation>
 
           </div>
-          <div  className='w-full text-[white] grid grid-cols-2 gap-5 py-12'>
+          <div className='w-full text-[white] grid grid-cols-2 gap-5 py-12'>
             <ScrollAnimation animateIn='flipInX'
               afterAnimatedIn={function afterAnimatedIn(v) {
                 var t = "Animate In finished.\n";
@@ -384,9 +382,9 @@ console.log(user)
 
               }}
               initiallyVisible={true}>
-              <div  className='flex flex-col justify-center items-center'>
-                <span  className='text-[30px] font-medium'>2017</span>
-                <span  className='text-center'>AÑO DE FUNDACIÓN</span>
+              <div className='flex flex-col justify-center items-center'>
+                <span className='text-[30px] font-medium'>2017</span>
+                <span className='text-center'>AÑO DE FUNDACIÓN</span>
               </div>
             </ScrollAnimation>
             <ScrollAnimation animateIn='flipInX'
@@ -397,9 +395,9 @@ console.log(user)
 
               }}
               initiallyVisible={true}>
-              <div  className='flex flex-col justify-center items-center'>
-                <span  className='text-[25px] font-medium'>La paz, Bolivia</span>
-                <span  className='text-center'>SEDE MUNDIAL</span>
+              <div className='flex flex-col justify-center items-center'>
+                <span className='text-[25px] font-medium'>La paz, Bolivia</span>
+                <span className='text-center'>SEDE MUNDIAL</span>
               </div>
             </ScrollAnimation>
             <ScrollAnimation animateIn='flipInX'
@@ -409,9 +407,9 @@ console.log(user)
                 t += 'v.inViewport: ' + v.inViewport;
 
               }}>
-              <div  className='flex flex-col justify-center items-center'>
-                <span  className='text-[30px] font-medium'>100 000 $</span>
-                <span  className='text-center'>FACTURACIÓN EN DOLARES EN 2023</span>
+              <div className='flex flex-col justify-center items-center'>
+                <span className='text-[30px] font-medium'>100 000 $</span>
+                <span className='text-center'>FACTURACIÓN EN DOLARES EN 2023</span>
               </div>
             </ScrollAnimation>
             <ScrollAnimation animateIn='flipInX'
@@ -422,14 +420,14 @@ console.log(user)
 
               }}
               initiallyVisible={true}>
-              <div  className='flex flex-col justify-center items-center'>
-                <span  className='text-[30px] font-medium'>1996</span>
-                <span  className='text-center'>AÑO DE FUNDACIÓN</span>
+              <div className='flex flex-col justify-center items-center'>
+                <span className='text-[30px] font-medium'>1996</span>
+                <span className='text-center'>AÑO DE FUNDACIÓN</span>
               </div>
             </ScrollAnimation>
           </div>
 
-          <div  className='grid grid-cols-2 gap-2 w-full '>
+          <div className='grid grid-cols-2 gap-2 w-full '>
 
             <button type="button" className="w-full border-[2px]  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
               MISIÓN saber mas...
@@ -452,15 +450,15 @@ console.log(user)
         </div>
 
       </section>
-   
 
 
 
 
-                {Object.entries(cliente).map((i, index)=> <Section subtitle={i[1].titulo} video={i[1].url} degrade='#00000067' id={i[0]}></Section>)}
+
+      {Object.entries(cliente).map((i, index) => <Section subtitle={i[1].titulo} video={i[1].url} degrade='#00000067' id={i[0]}></Section>)}
 
 
-{/* 
+      {/* 
       <Section subtitle='TRANSPORTE TERRESTRE' video='/highway2.mp4' degrade='#00000067' id="terrestre"></Section>
       <Section subtitle='TRANSPORTE AEREO' video='/avion.mp4' degrade='#00000018' id="aereo"></Section>
       <Section subtitle='TRANSPORTE MARITIMO' video='/barco.mp4' degrade='#00529657' id="maritimo"></Section> */}
