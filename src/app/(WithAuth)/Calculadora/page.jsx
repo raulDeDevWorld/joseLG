@@ -17,7 +17,14 @@ export default function Home() {
 
     const router = useRouter()
 
+    const [data, setData] = useState({})
 
+
+
+
+    function onChangeHandler(e) {
+        setData({ ...data, [e.target.name]: e.target.value })
+    }
 
 
 
@@ -50,7 +57,7 @@ export default function Home() {
                 {/* <video  className='absolute top-0  w-full min-h-[100vh] object-cover z-10' autoPlay loop muted>
       <source src='underwater.mp4' type="video/mp4" />
     </video>  */}
-  
+
                 <img src="/truck.png" className='fixed top-0 w-screen h-screen bg-[#01A7EB] object-cover lg:hidden' alt="" />
                 <img src="/airplane-bg.jpg" className='fixed top-0  w-screen h-screen bg-[#01A7EB] object-cover hidden md:block' alt="" />
                 <div className='w-full text-center flex justify-center'>
@@ -71,23 +78,23 @@ export default function Home() {
 
                         </p>
                         <div class="relative z-0 w-full mb-5 group ">
-                            <input type="number" name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
+                            <input type="number" name="f1" onChange={onChangeHandler} id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
                             <label for="floating_email" class="z-50 peer-focus:font-medium absolute text-sm bg-white px-5 mx-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Largo cm</label>
                         </div>
                         <div class="relative z-0 w-full mb-5 group ">
-                            <input type="number" name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
+                            <input type="number" name="f2" onChange={onChangeHandler} id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
                             <label for="floating_email" class="z-50 peer-focus:font-medium absolute text-sm bg-white px-5 mx-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Ancho cm</label>
                         </div>
                         <div class="relative z-0 w-full mb-5 group ">
-                            <input type="number" name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
+                            <input type="number" name="f3" onChange={onChangeHandler} id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
                             <label for="floating_email" class="z-50 peer-focus:font-medium absolute text-sm bg-white px-5 mx-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Alto cm</label>
                         </div>
                         <div class="relative z-0 w-full mb-5 group ">
-                            <input type="number" name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
+                            <input type="number" name="f4" onChange={onChangeHandler} id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
                             <label for="floating_email" class="z-50 peer-focus:font-medium absolute text-sm bg-white px-5 mx-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Cantidad</label>
                         </div>
                         <div class="relative z-0 w-full mb-5 group ">
-                            <input type="number" name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
+                            <input type="number" value={data.f1 && data.f2 && data.f3 && data.f4 && ((data.f1*data.f2*data.f3)*data.f4)/6000} name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
                             <label for="floating_email" class="z-50 peer-focus:font-medium absolute text-sm bg-white px-5 mx-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Peso volumetrico</label>
                         </div>
 
@@ -109,15 +116,15 @@ export default function Home() {
 
                         </p>
                         <div class="relative z-0 w-full mb-5 group ">
-                            <input type="number" name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
+                            <input type="number" name="f21" onChange={onChangeHandler} id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
                             <label for="floating_email" class="z-50 peer-focus:font-medium absolute text-sm bg-white px-5 mx-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">m3</label>
                         </div>
                         <div class="relative z-0 w-full mb-5 group ">
-                            <input type="number" name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
+                            <input type="number" name="f22" onChange={onChangeHandler} id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
                             <label for="floating_email" class="z-50 peer-focus:font-medium absolute text-sm bg-white px-5 mx-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Cantidad</label>
                         </div>
                         <div class="relative z-0 w-full mb-5 group ">
-                            <input type="number" name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
+                            <input type="number" name="f23" value={data.f21 && data.f22 && Math.round(((data.f21*1000000)*data.f22)/6000)} id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
                             <label for="floating_email" class="z-50 peer-focus:font-medium absolute text-sm bg-white px-5 mx-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Peso volumetrico</label>
                         </div>
 
@@ -140,11 +147,11 @@ export default function Home() {
 
                         </p>
                         <div class="relative z-0 w-full mb-5 group ">
-                            <input type="number" name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
+                            <input type="number" name="f1" onChange={onChangeHandler} id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
                             <label for="floating_email" class="z-50 peer-focus:font-medium absolute text-sm bg-white px-5 mx-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Peso kg</label>
                         </div>
                         <div class="relative z-0 w-full mb-5 group ">
-                            <input type="number" name="floating_email" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
+                            <input type="number" name="f2" id="floating_email" class="block shadow-xl  py-2.5  w-full text-sm text-gray-900 bg-transparent  px-5 border border-[#dddddd] appearance-none  focus:outline-none focus:ring-0  peer rounded-[5px]" placeholder=" " required />
                             <label for="floating_email" class="z-50 peer-focus:font-medium absolute text-sm bg-white px-5 mx-2 text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Peso volumetrico</label>
                         </div>
 
