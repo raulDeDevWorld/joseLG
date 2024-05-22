@@ -190,30 +190,30 @@ export default function BottomNavigation({ rol }) {
             <div className=''>
                 <h3 className="text-white text-[16px] font-bold pt-5 pl-5">NOSOTROS</h3>
                 <div className='grid grid-cols-2 gap-[20px] p-[20px]'>
-                    <Link href='/' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
+                    <Link href='/' onClick={()=>setNav(false)} className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
                         <img src="/icons/NOSOTROS.png" className="w-[40px]" alt="" />
                         <span>Nosotros</span>
                     </Link>
-                    <Link href='/' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
+                    <Link href='/' onClick={()=>setNav(false)} className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
                         <img src="/icons/NOSOTROS.png" className="w-[40px]" alt="" />
                         <span>Por que nosotros?</span>
                     </Link>
                 </div>
                 <h3 className="text-white text-[16px] font-bold pt-5 pl-5">NUESTROS SERVICIOS</h3>
                 <div className='grid grid-cols-2 gap-[20px] p-[20px]'>
-                    <Link href='#terrestre' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
+                    <Link href='#terrestre' onClick={()=>setNav(false)} className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
                         <img src="/icons/TERRESTRE.png" className="w-[40px]" alt="" />
                         <span className="text-[12px] font-bold text-center">Transporte Terrestre</span>
                     </Link>
-                    <Link href='#maritimo' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
+                    <Link href='#maritimo' onClick={()=>setNav(false)} className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
                         <img src="/icons/MARITIMO.png" className="w-[40px]" alt="" />
                         <span className="text-[12px] font-bold text-center">Transporte Maritimo</span>
                     </Link>
-                    <Link href='#aereo' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
+                    <Link href='#aereo' onClick={()=>setNav(false)} className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
                         <img src="/icons/AEREO.png" className="w-[40px]" alt="" />
                         <span className="text-[12px] font-bold text-center">Transporte Aereo</span>
                     </Link>
-                    <Link href='/' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
+                    <Link href='/' onClick={()=>setNav(false)} className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
                         <img src="/icons/DESPACHO ADUANERO.png" className="w-[40px]" alt="" />
                         <span className="text-[12px] font-bold text-center">Despachos Aduaneros</span>
                     </Link>
@@ -222,15 +222,15 @@ export default function BottomNavigation({ rol }) {
                 <h3 className="text-white text-[16px] font-bold pt-5 pl-5">SERVICIOS ESPECIALIZADOS</h3>
                 <div className='grid grid-cols-2 gap-[20px] p-[20px]'>
 
-                    <Link href='/' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
+                    <Link href='/' onClick={()=>setNav(false)} className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
                         <img src="/icons/CARGA REFRIGERADA.png" className="w-[40px]" alt="" />
                         <span className="text-[12px] font-bold">Cargas Proyecto</span>
                     </Link>
-                    <Link href='#terrestre' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
+                    <Link href='#terrestre' onClick={()=>setNav(false)} className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
                         <img src="/icons/TERRESTRE.png" className="w-[40px]" alt="" />
                         <span className="text-[12px] font-bold text-center">Exportaciones</span>
                     </Link>
-                    <Link href='#maritimo' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
+                    <Link href='#maritimo' onClick={()=>setNav(false)} className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
                         <img src="/icons/MARITIMO.png" className="w-[40px]" alt="" />
                         <span className="text-[12px] font-bold text-center">Farmacéutico y Sanitario</span>
                     </Link>
@@ -238,23 +238,23 @@ export default function BottomNavigation({ rol }) {
 
                 <h3 className="text-white text-[16px] font-bold pt-5 pl-5">HERRAMIENTAS</h3>
                 <div className='relative grid grid-cols-2 gap-[20px] p-[20px] '>
-                    <Link href='/' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
+                    <Link href='/' onClick={()=>setNav(false)} className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
                         <img src="/icons/TIPOS DE CONTENEDORES.png" className="w-[40px]" alt="" />
                         <span className="text-[12px] font-bold text-center">Contenedores maritimos</span>
                     </Link>
-                    <Link href='/' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
+                    <Link href='/' onClick={()=>setNav(false)} className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
                         <img src="/icons/TIPOS DE CONTENEDORES.png" className="w-[40px]" alt="" />
                         <span className="text-[12px] font-bold text-center">Contenedores aereos</span>
                     </Link>
-                    <Link href='/Calculadora' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
+                    <Link href='/Calculadora' onClick={()=>setNav(false)} className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
                         <img src="/icons/CALCULADORA DE PESO CARGABLE.png" className="w-[40px]" alt="" />
                         <span className="text-[12px] font-bold text-center">Calculadora de peso cargable  </span>
                     </Link>
-                    <Link href='/Calculadora' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
+                    <Link href='/Calculadora' onClick={()=>setNav(false)} className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
                         <img src="/icons/CALCULADORA DE PESO CARGABLE.png" className="w-[40px]" alt="" />
                         <span className="text-[12px] font-bold text-center">Calculadora de conversiones  </span>
                     </Link>
-                    <Link href='/Tracking' className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
+                    <Link href='/Tracking' onClick={()=>setNav(false)} className='bg-[#F1BA06] flex flex-col items-center px-[20px] py-[10px] rounded-[10px]'>
                         <img src="/icons/DIRECCION.png" className="w-[40px]" alt="" />
                         <span className="text-[12px] font-bold text-center">Tracking</span>
                     </Link>
