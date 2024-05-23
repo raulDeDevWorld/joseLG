@@ -96,7 +96,7 @@ export default function Home() {
         if (e.target[0].files[0]) {
             uploadIMG(`/Cliente/${query}`, '/', query, dataURL.file, { ...data, tarjetas: data2 })
         } else {
-            writeUserData(`/Cliente/${query}`, { data, tarjetas: data2 })
+            writeUserData(`/Cliente/${query}`, { ...data, tarjetas: data2 })
         }
 
         // e.target[1].files[0] && uploadIMG('frontPage', 'frontIMG', 'frontIMG', e.target[1].files[0], obj, setUserData, setUserSuccess, 'urlIMG')
