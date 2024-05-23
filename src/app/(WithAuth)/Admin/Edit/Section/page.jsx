@@ -94,7 +94,7 @@ export default function Home() {
     function saveFrontPage(e) {
         e.preventDefault()
         if (e.target[0].files[0]) {
-            uploadIMG(`/Cliente/${query}`, '/', query, dataURL.file, { data, tarjetas: data2 })
+            uploadIMG(`/Cliente/${query}`, '/', query, dataURL.file, { ...data, tarjetas: data2 })
         } else {
             writeUserData(`/Cliente/${query}`, { data, tarjetas: data2 })
         }
