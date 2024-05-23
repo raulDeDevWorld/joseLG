@@ -72,7 +72,7 @@ function Item({ e1, e2 }) {
   </ScrollAnimation>
 }
 
-function Section({ subtitle, video, gradiente, id, children }) {
+function Section({ subtitle, video, gradiente, id, children, tarjetas }) {
   return <section className='relative w-full bg-[#4f8cc5] overflow-x-hidden overflow-hidden' id={id}>
 
 
@@ -102,11 +102,12 @@ function Section({ subtitle, video, gradiente, id, children }) {
       </div>
       <div className='w-full text-[white] grid grid-cols-2 gap-5 py-12'>
 
-        <Item e1={'1 a 2tn'} e2={'Camionetas'} />
-        <Item e1={'hasta 20tn'} e2={'Camiones'} />
-        <Item e1={'La paz, Bolivia'} e2={'SEDE MUNDIAL'} />
-        <Item e1={'100 000 $'} e2={'FACTURACIÓN EN DOLARES EN 2023'} />
-        <Item e1={'2017'} e2={'AÑO DE FUNDACIÓN'} />
+
+
+{tarjetas && tarjetas !== undefined && Object.values(tarjetas).map((i, index)=> <Item e1={i['ip0']} e2={i['ic0']} />)
+}
+       
+
 
       </div>
       <div className='grid grid-cols-2 gap-2 w-full '>
@@ -509,7 +510,7 @@ export default function Home() {
 
 
 
-      {Object.entries(cliente).map((i, index) => <Section subtitle={i[1].titulo} video={i[1].url} degrade='#00000067' id={i[0]}></Section>)}
+      {Object.entries(cliente).map((i, index) => <Section subtitle={i[1].titulo} video={i[1].url} degrade='#00000067'   tarjetas={i[1].tarjetas} id={i[0]}></Section>)}
 
 
       {/* 
