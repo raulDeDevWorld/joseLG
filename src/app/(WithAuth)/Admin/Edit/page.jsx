@@ -194,7 +194,7 @@ export default function Home() {
 
       <img src="/airplane-bg.jpg" className='absolute  w-screen h-screen bg-[#01A7EB] object-cover hidden md:block' alt="" />
 
-      <div className='relative  min-h-screen z-10 flex flex-col justify-around items-center'>
+      <div className='relative  min-h-screen z-10 flex flex-col justify-center items-center'>
 
         <Button url='terrestre'> Transporte Terrestre  </Button>
         <Button url='maritimo'> Transporte Maritimo  </Button>

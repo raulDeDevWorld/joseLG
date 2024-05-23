@@ -56,7 +56,7 @@ export default function Home() {
 
     const [counter, setCounter] = useState([''])
 
-   console.log(window.location.href.split('=')[1]) 
+//    console.log(window.location.href.split('=')[1]) 
     const [textEditor, setTextEditor] = useState("")
 
     // const searchParams = useSearchParams()
